@@ -1,5 +1,5 @@
         body {
-            background-color: rgb(33, 32, 32);
+            background-color: rgb(0, 0, 0);
             margin: 0;
             padding: 0;
         }
@@ -12,9 +12,9 @@
             box-sizing: border-box;
             width: 100%;
             border-radius: 0 0 20px 20px;
-            border-left: 4px dashed;
-            border-right: 4px dashed;
-            border-bottom: 4px dotted;
+            border-left: 4px solid;
+            border-right: 4px solid;
+            border-bottom: 4px dashed;
             border-color: rgb(17, 237, 182);
             position: sticky;
             top: 0;
@@ -71,6 +71,17 @@
 
         }
 
+        .resumeanchor:hover {
+            transition: 0.3s;
+            background-color: rgb(17, 237, 237);
+            color: black;
+        }
+
+        .resumeanchor {
+            text-decoration: none;
+            color: rgb(17, 237, 237);
+        }
+
         .section-ctrl {
             display: none;
             width: 90px;
@@ -78,7 +89,6 @@
         }
 
         #aboutme-ctrl:checked~#aboutme,
-        #resume-ctrl:checked~#resume,
         #projects-ctrl:checked~#projects,
         #contact-ctrl:checked~#contact {
             display: block;
@@ -94,6 +104,10 @@
         /* everything below regarding about me section */
 
         .abouttitle {
+            animation: shadowFade 10.0s ease-in-out infinite;
+
+            box-shadow: 3px 3px 15px rgba(17, 237, 237, 0.841);
+            background-color: rgba(253, 253, 253, 0.11);
             border-radius: 12px;
             /* box-shadow: 3px 3px 15px rgb(161, 243, 158); */
             text-align: justify;
@@ -106,6 +120,8 @@
             justify-items: center;
         }
 
+
+
         .abtitle {
             display: flex;
             font-family: "Google Sans Code", monospace;
@@ -113,8 +129,8 @@
             width: 94%;
             font-size: 70px;
             margin-bottom: 15px;
-            border-bottom: 3px solid rgb(17, 237, 237);
-            padding-bottom: 5px 10px 0 10px;
+            border-bottom: 3px dotted rgb(17, 237, 237);
+            padding-bottom: 10px;
 
         }
 
@@ -132,8 +148,9 @@
             display: flex;
             align-items: center;
             justify-items: center;
+            text-decoration: none;
             font-family: "Google Sans Code", monospace;
-            color:rgb(17, 237, 237);
+            color: rgb(17, 237, 237);
             font-size: 24px;
 
         }
@@ -144,7 +161,7 @@
             gap: 50px;
             align-items: center;
             justify-content: center;
-            padding-left: 200px;
+            padding-left: 250px;
 
         }
 
@@ -171,6 +188,8 @@
         }
 
         .aboutmediv {
+            animation: shadowFade 10.0s ease-in-out infinite;
+            background-color: rgba(253, 253, 253, 0.11);
             border-radius: 12px;
             /* box-shadow: 3px 3px 15px rgb(161, 243, 158); */
             text-align: justify;
@@ -183,6 +202,9 @@
         }
 
         .techdiv {
+            animation: shadowFade 10.0s ease-in-out infinite;
+            box-shadow: 5px 5px 25px rgba(17, 237, 237, 0.841);
+            background-color: rgba(253, 253, 253, 0.11);
             display: flex;
             flex-direction: column;
             border-radius: 12px;
@@ -191,11 +213,24 @@
             /* background-color: rgb(47, 47, 47); */
             padding: 20px 20px 20px 20px;
             margin: 40px 55px 20px 55px;
+            height: 450px;
             font-family: "Titillium Web", sans-serif;
             font-size: 20px;
             color: rgb(17, 237, 182);
         }
 
+        @keyframes shadowFade {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+            }
+
+            50% {
+                box-shadow: 5px 5px 25px rgba(17, 237, 237, 0.841);
+
+            }
+        }
 
 
         .gridinleft {

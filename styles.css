@@ -16,6 +16,9 @@
             border-right: 4px dashed;
             border-bottom: 4px dotted;
             border-color: rgb(17, 237, 182);
+            position: sticky;
+            top: 0;
+
         }
 
         .name {
@@ -127,16 +130,29 @@
 
         .ablinks {
             display: flex;
+            align-items: center;
+            justify-items: center;
+            font-family: "Google Sans Code", monospace;
+            color:rgb(17, 237, 237);
+            font-size: 24px;
 
         }
 
         .titlegrid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 40px;
+            gap: 50px;
             align-items: center;
-            padding-left: 40px;
+            justify-content: center;
+            padding-left: 200px;
 
+        }
+
+        .ablinks:hover {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            transform: translate3d(6px, 6px, 0);
+            box-shadow: 6px 8px 16px rgba(17, 237, 237, 0.841);
+            background-color: transparent;
         }
 
 
@@ -226,6 +242,14 @@
             padding: 15px 10px 25px 5px;
             border-radius: 15px;
             box-shadow: 3px 5px 20px rgba(82, 82, 82, 0.241);
+
+        }
+
+        .leftinleft:hover,
+        .leftinright:hover {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            transform: translate3d(6px, -5px, 0);
+            box-shadow: 6px 8px 16px rgba(17, 237, 237, 0.841);
         }
 
         .tech-logo1 {
